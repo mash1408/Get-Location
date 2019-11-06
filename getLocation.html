@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function getuserloc() { 
+	navigator.geolocation.getCurrentPosition(display);
+
+	
+}
+function display(position) { 
+
+
+var displayText = "latitude:" + position.coords.latitude ;
+var displayText2="longitude:" + position.coords.longitude;
+
+document.getElementById("k").innerHTML = displayText;
+document.getElementById("long").innerHTML = displayText2;
+}
+
+</script>
+</head>
+<body>
+<button onclick="getuserloc()">location</button>
+<div id="k">
+Latitude:Nil
+</div>
+<div id="long">
+longitude:Nil
+</div>
+</body>
+</html>
